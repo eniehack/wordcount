@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <textarea id="text"></textarea>
+    <p>
+        文字数:
+        <span id="counter"></span>
+    </p>
+    <script>
+        document.addEventListener("DOMContentLoaded", (e) => {
+            const textElem = document.getElementById("text");
+            const counterElem = document.getElementById("counter");
+
+            textElem.addEventListener("input", (e) => {
+                const arr = Array.from(e.target.value);
+                counterElem.textContent = arr.length;
+            });
+        });
+    </script>
+</body>
+</html>
